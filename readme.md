@@ -85,8 +85,11 @@ _**Note:** I recommend setting a static IP for your board on your home router.  
 Associated scripts were written on a system running Python 3 on OS X.  The `main.py` script works by checking for Zoom in the running processes.  If the running processes includes an ID, then it'll attempt to open the crashlog/debug log matching the PID of the process from Zoom in `~/Library/Logs/zoom.us/crashlog/{pid}.log`.  It will find the most recent meeting ID and either turn on or off the LED by performing a GET request to the board.
 
 #### URLs for your board
+
+```
 http://<board_ip>/meeting/on
 http://<board_ip>/meeting/off
+```
 
 Update the script with the IP of your board.  
 
@@ -141,18 +144,20 @@ Lc = LED Current (20mA == .02 amps)
 
 TODO: Create diagram of electric circuit
 
+```
 ESP32 --> Pin 26 --> Resistor --> + on LED
 ESP32 --> Pin 27 --> Resistor --> + on LED
 ESP32 --> GND --> - on both LEDs
 USB Charger --> Power on ESP32
+```
 
-Feel free to use the attached image to insert into your frame.  I've included the gimp source document and the font if you wish to change it up a bit.  The image was made to be printed as a 4x6 which can be cut down to size.  I assumed a 4-inch by 4-inch frame with a 1/4" border around it.  Using a 4x6 image made it easy to submit the job to a local 1-hour photo place since I don't have a color printer.
+Feel free to use the [attached image](images/gimp_photo.png) to insert into your frame.  I've included the gimp source document and the font if you wish to change it up a bit.  The image was made to be printed as a 4x6 which can be cut down to size.  I assumed a 4-inch by 4-inch frame with a 1/4" border around it.  Using a 4x6 image made it easy to submit the job to a local 1-hour photo place since I don't have a color printer.
 
 A hole punch was used to create the holes in the picture and the LEDs were glued into place by placing a bit of hot glue on the back glass and pressing the LED into it. 
 
 ## References
 
 * This project was inspired by a tweet from [Steve Force @cairn4](https://twitter.com/cairn4/status/1245539977993355265).
-* User fanuch got me started with his [solution for notifying his Hubitat when they are on a meeting](https://community.home-assistant.io/t/zoom-meeting-monitoring-to-ha/246336).  This was a welcome find for figuring out how to detect meetings.
+* User fanuch got me started with their [solution for notifying a Hubitat when they are on a meeting](https://community.home-assistant.io/t/zoom-meeting-monitoring-to-ha/246336).  This was a welcome find for figuring out how to detect meetings.
 * I used some code examples on a [project from Answith Raj](https://circuitdigest.com/microcontroller-projects/esp32-ble-client-connecting-to-fitness-band-to-trigger-light) for tracking their fitness band for turning on a light.
 * [LEDs for Beginners](https://www.instructables.com/LEDs-for-Beginners/)

@@ -6,7 +6,7 @@
 # <bitbar.author.github>covertgeek</bitbar.author.github>
 # <bitbar.desc>Detect if an active meeting is happening and display the meeting ID</bitbar.desc>
 
-pythonenv="/Users/drush/Documents/Bitbar/Plugins/ZoomMonitor"
+pythonenv="/Users/user/Documents/Bitbar/Plugins/ZoomMonitor"
 script="main.py"
 
 $pythonenv/venv/bin/python $pythonenv/$script
